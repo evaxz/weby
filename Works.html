@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Work</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="work-header">
+            <nav>
+                <!-- <a href="index.html"><img src="images/logo.png"></a> -->
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" id="flip" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="Works.html">WORKS</a></li>
+                        <li><a href="About.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="help.html">HELP</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" id="flip" onclick="showMenu()"></i>
+            </nav>
+        </section>
+        <div class="works">
+            <h1>My Projects</h1>
+            <div class="row">
+                <div class="works-col">
+                    <h3>AI Training Project</h3>
+                    <p>training an AI in perceptron Algorithm to make the right decision <br>takes Two inputes and compare it to a threshold.</p>
+                </div>
+                <div class="works-col">
+                    <h3>Encryption & Decryption</h3>
+                    <p>s,jdhgfasd lasdug hfasdjfhg alsdgh sldghsdl gasdg dkjfhg d,fkjgh da,fkgj haldk</p>
+                </div>
+                <div class="works-col">
+                    <h3>Student Sorting APP</h3>
+                    <p>A JAVA APP with an InterFace for sorting Students data<br>by IDs, names, marks and gardes.</p>
+                </div>
+            </div>
+        </div>
+        <!-- javascript for menu -->
+        <script>
+
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+        </script>
+    </body>
+</html>

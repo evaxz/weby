@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Help</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="help-header">
+            <nav>
+                <!-- <a href="index.html"><img src="images/logo.png"></a> -->
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" id="flip" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="Works.html">WORKS</a></li>
+                        <li><a href="About.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="help.html">HELP</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" id="flip" onclick="showMenu()"></i>
+            </nav>
+            <div class="help">
+                <h1>Send an E-mail</h1>
+                <form action="https://formspree.io/f/xlevoovn" method="post">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <input type="email" name="E-mail" placeholder="Email" required>
+                    <textarea name="Message" placeholder="message" required></textarea>
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- javascript for menu -->
+        <script>
+
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+        </script>
+    </body>
+</html>
