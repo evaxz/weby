@@ -168,20 +168,83 @@ nav .fa{
 
 /* My works */
 .work-header{
-    min-height: 30vh;
+    min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/work-banner.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
+.works-col .learn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 12px 34px;
+    font-size: 13px;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.works-col .learn:hover{
+    background: #21ebff;
+    color: #111;
+    box-shadow: 0 0 50px #21ebff;
+    transition-delay: 0.3s;
+}
+.works-col .learn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #21ebff;
+    border-left: 2px solid #21ebff;
+    transition: 0.5s;
+}
+.works-col .learn:hover::before{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+.works-col .learn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #21ebff;
+    border-right: 2px solid #21ebff;
+    transition: 0.5s;
+}
+.works-col .learn:hover::after{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+ 
+.workss{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 150px;
+}
+.workss h1{
+    color: black;
+    font-size: 36px;
+    font-weight: 600;
+}
 .works{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 150px;
 }
-h1{
+.works h1{
+    color: white;
     font-size: 36px;
     font-weight: 600;
 }
@@ -190,9 +253,7 @@ h2{
     font-weight: 600;
     color: white
 }
-/* p{
-    color: ;
-} */
+
 .row{
     margin-top: 5%;
     display: flex;
@@ -200,7 +261,7 @@ h2{
 }
 .works-col{
     flex-basis: 31%;
-    background: #00a7b6;
+    background: #9ac6ca;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
@@ -213,7 +274,14 @@ h3{
     margin: 10px 0;
 }
 .works-col:hover{
-    box-shadow: 0 0 20px 0px #21ebff;
+    box-shadow: 0 0 20px 0px #0eebff;
+}
+
+.works i{
+    font-size: 30px;
+}
+.workss i{
+    font-size: 30px;
 }
 
 /* help */
@@ -306,13 +374,90 @@ button:hover::after{
     transition-delay: 0s;
 }
 
+/* about */
+.about-header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/about.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+span{
+    color: #21ebff;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
 
+.content h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 64px;
+}
 
+.content h3{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+.content h4{
+    color: #21ebff;
+}
 
-
-
-
-
+a.con{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 12px 34px;
+    font-size: 13px;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+a.con:hover{
+    background: #21ebff;
+    color: #111;
+    box-shadow: 0 0 50px #21ebff;
+    transition-delay: 0.3s;
+}
+a.con:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #21ebff;
+    border-left: 2px solid #21ebff;
+    transition: 0.5s;
+}
+a.con:hover::before{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+a.con:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #21ebff;
+    border-right: 2px solid #21ebff;
+    transition: 0.5s;
+}
+a.con:hover::after{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
 
 
 
