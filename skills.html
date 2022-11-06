@@ -8,6 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
     </head>
     <body>
         <section class="skills-header">
@@ -24,8 +26,65 @@
                 </div>
                 <i class="fa fa-bars" id="flip" onclick="showMenu()"></i>
             </nav>
+            <section class="bod">
+            <div class="wrapper">
+                <div class="card">
+                    <div class="circle">
+                        <div class="bar">
+                            <div class="box"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="text">C++</div>
+                </div>
+                <div class="card Python">
+                    <div class="circle">
+                        <div class="bar">
+                            <div class="box"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="text">Python</div>
+                </div>
+                <div class="card Java">
+                    <div class="circle">
+                        <div class="bar">
+                            <div class="box"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="text">Java</div>
+                </div>
+                <div class="card enc">
+                    <div class="circle">
+                        <div class="bar">
+                            <div class="box"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="text">Encryption</div>
+                </div>
+            </div>
+            <script>
+                let options = {
+                    startAngle: -1.55,
+                    size: 150,
+                    value: 0.80,
+                    fill: {gradient: ["#21ebff", "#00a7b6"]}
+                }
+                $(".circle .bar").circleProgress(options).on('circle-animation-progress', 
+                function(event, progess, stepValue){
+                    $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%")
+                });
+                $(".Python .bar").circleProgress({
+                    value: 0.90,
+                });
+                $(".Java .bar").circleProgress({
+                    value: 0.70,
+                });
+                $(".enc .bar").circleProgress({
+                    value: 0.65,
+                });
+            </script>
         </section>
-        
+        </section>
+
         
         <!-- javascript for menu -->
         <script>

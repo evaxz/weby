@@ -212,9 +212,10 @@ nav .fa{
     .row{
         flex-direction: column;
     }
-    .form{
-        width: 12rem;
+    .post{
+        width: 300px;
     }
+
 }
 
 /* My works */
@@ -520,14 +521,86 @@ a.con:hover::after{
     background-size: cover;
     position: relative;
 }
+.bod{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* background: -webkit-linear-gradient(left, #21ebff, #00a7b6); */
+}
+.wrapper{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .card{
+    width: calc(25% - 20px);
+    background: #fff;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.wrapper .card .circle{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    /* border: 8px solid #00a7b6; */
+    border-radius: 50%;
+}
+.card .circle .box,
+.card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.card .circle .box{
+    height: 100%;
+    width: 100%;
+    background: white;
+    transform: translate(-50%, -50%)scale(0.8);
+    border-radius: 50%;
+}
+.card .circle .box span,
+.wrapper .card .text{
+    background: -webkit-linear-gradient(left, #21ebff, #00a7b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card .circle .box span{
+    transform: translate(-45%, -50%);
+    font-size: 30px;    
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.card .text{
+    font-size: 20px;
+    font-weight: 600;
+}
 
 
-
-
-
-
-
-
+@media(max-width: 753px){
+    .wrapper{
+        width: 700px;
+    }
+    .wrapper .card{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 505px){
+    .wrapper{
+        width: 500px;
+    }
+    .wrapper .card{
+        width: 100%;
+    }
+}
 /* footer */
 
 footer{
@@ -560,17 +633,12 @@ footer p:nth-child(2){
 }
 
 .social a{
-    width: 45px;
-    height: 45px;
     display: inline-block;
     align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    border-radius: 50%;
     margin: 10px 25px;
     color: #111;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 45px;
 }
 .social a:hover{
     transform: scale(1.3);
