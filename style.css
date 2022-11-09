@@ -216,9 +216,6 @@ nav .fa{
         width: 300px;
     }
 
-    .help h1{
-        font-size: 20px;
-    }
 
 }
 
@@ -358,7 +355,9 @@ h3{
     padding-top: 200px;
 }
 .help h1{
-    font-size: 50px;
+    font-size: 40px;
+    /* text-align: center;
+    padding-top: 150px; */
     color: white;
 }
 form{
